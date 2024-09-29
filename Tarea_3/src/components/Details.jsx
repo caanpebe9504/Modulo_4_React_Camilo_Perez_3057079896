@@ -1,23 +1,18 @@
 import React from "react"
 
-async function Details(props){
+function Details(props){
 
-    const url = "https://randomuser.me/api/"
 
-    const fetchUrl = (await fetch(url)).json()
-    const userDetails = await fetchUrl[0].results
-
-    return ( <div>
+    return ( 
+    <div>
         <p>
-            <b>Genero:</b>{userDetails.gender}
+            <b>Género:</b>{props.genre}
         </p>
         <p>
-            <b>Estado</b>{userDetails.status}
+            <b>Estado:</b>{props.status}
         </p>
     </div>
-    
     )
-    
 }
 
 export default Details;

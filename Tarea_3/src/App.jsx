@@ -1,32 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import React from "react"
-import Title from "./components/Titulo"
-import Image from "./components/Imagen"
+import Title from "./components/Title"
+import Image from "./components/Image"
 import Details from "./components/Details"
 
 function App() {
-  // Recuerda que este es solo un componente funcional, 
-  // tu debes incluir estilos para hacerlo más atractivo
+  
+  const artistTitle = "Nicky Minaj"
+  const artistPicture = "https://cdn.britannica.com/68/163068-050-349331AA/Nicki-Minaj-Hammersmith-Apollo-London-June-24-2012.jpg?w=300"
+  const artistGenre = "Female"
+  const artistsStatus = "Active"
+
   return (
+
     <div>
-      {/* Titulo de el artista/personaje */}
-      <Titulo
-        title={Title}
-      />
-      {/* Imagen de el artista/personaje */}
-      <Image
-        url={Image} 
-      />
-      {/* Detalles de el artista/personaje */}
-      <Details
-        genre={Details} 
-        status={Details} 
-      />
+
+      <Title title={artistTitle} />
+      
+      <Image url={artistPicture} />
+  
+      <Details genre={artistGenre} status={artistsStatus} />
+
     </div>
+
   );
+  
 }
 
 
