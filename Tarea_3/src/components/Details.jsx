@@ -1,15 +1,19 @@
 import React from "react"
+import "../styles/styles.css"
 
 function Details(props){
 
 
     return ( 
     <div>
-        <p>
-            <b>Género:</b>{props.genre}
+        <p className="detail">
+            <b>Género:  </b>{props.gender}
         </p>
-        <p>
-            <b>Estado:</b>{props.status}
+        <p className="detail">
+            <b>Estado:  </b>{props.status}
+        </p>
+        <p className="detail">
+            <b>Ocupación:  </b>{props.profession}
         </p>
     </div>
     )
