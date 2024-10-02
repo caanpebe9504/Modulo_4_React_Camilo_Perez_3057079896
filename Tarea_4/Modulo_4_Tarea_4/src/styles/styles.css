@@ -1,0 +1,66 @@
+
+#card_container{
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 100px;
+
+}
+
+#card{
+
+    margin: 1px;
+    padding: 0 15px;
+    
+    width: 250px;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 10px;
+    
+    background-color: rgb(227, 179, 231);
+    box-shadow: 0 0 15px black;
+    
+}
+
+
+#img {
+
+    border: solid pink 3px;
+    border-radius: 500px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.title{
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0;
+
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+}
+
+.detail{
+    color: rgb(16, 19, 2);
+    font-size: 35px;
+    text-align: center;
+    margin: 15px 0;
+
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 22,
+    "SHLN" 50;
+}
+
