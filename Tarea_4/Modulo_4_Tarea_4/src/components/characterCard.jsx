@@ -11,9 +11,8 @@ const characterCard = (props) => {
             
             <Name name = {props.name} />
             <Image image = {props.image} />
-            <Description status = {props.status} />
-            <Description gender = {props.gender} />
-
+            <Description status = {props.status} gender = {props.gender} />
+            
         </div>
     )
 }

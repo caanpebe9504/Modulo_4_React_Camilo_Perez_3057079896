@@ -1,12 +1,17 @@
 import React from "react"
 
+import "../styles/styles.css"
+
 const Description = (props) => {
 
     return (
-        <div>
+        <div className="detail">
             <p>
-                {props.status}
-                {props.gender}
+                Status: {props.status}      
+            </p>
+                 
+            <p>
+                Género: {props.gender}
             </p>
         </div>
     )
