@@ -1,22 +1,21 @@
 import React from "react"
-import Title from "./title"
+
+import Name from "./name"
 import Image from "./image"
-import Details from "./details"
+import Description from "./description"
 
-import "../styles/styles.css"
+const characterCard = (props) => {
 
-function userCharacterCard(props){
+    return (
+        <div>
+            
+            <Name name = {props.name} />
+            <Image image = {props.image} />
+            <Description status = {props.status} />
+            <Description gender = {props.gender} />
 
-    return
-
-    <div>
-
-        < Title userTitle = {props.name}/>
-        < Image image = {props.image}/>
-        < Details gender = {props.gender}/>
-        < Details gender = {props.status}/>
-
-    </div>
+        </div>
+    )
 }
 
-export default userCharacterCard;
+export default characterCard

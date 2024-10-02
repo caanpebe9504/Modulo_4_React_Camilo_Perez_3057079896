@@ -1,9 +1,12 @@
 import React from "react"
 
-function userImage(props){
-
-    return <img src={props.image} alt="" />
-
+const Image = (props) => {
+    
+    return (
+        <div>
+            <img src={props.image} alt="Foto_personaje_R&M" />
+        </div>
+    )
 }
 
-export default userImage
+export default Image
