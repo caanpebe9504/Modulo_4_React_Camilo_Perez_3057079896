@@ -1,47 +1,28 @@
-import { useState, useEffect } from 'react'
 import './App.css'
 
-import CharacterCard from "./components/characterCard"
+import RickAndMortyCharacterCard from "./components/RickAndMortyCharacterCard"
+import "./styles/styles.css"
 
 function App() {
   
-  const [name, setName] = useState ("")
-  const [image, setImage] = useState ("")
-  const [gender, setGender] = useState ("")
-  const [status, setStatus] = useState ("")
-
-  const url = "https://rickandmortyapi.com/api/character/"
-  const userId = 4
-
-  useEffect(() => {
-
-    fetch(url + userId)
-      .then((response) => response.json())
-      .then((userData) => {
-        
-        setName(userData.name)
-        setImage(userData.image)
-        setGender(userData.gender)
-        setStatus(userData.status)
-
-      })
-  },[])
-    
-
   return (  
-      <div>
+    
+      <div id="card_container">
 
-        <h1>Personajes de Rick & Morty</h1>
-
-        <CharacterCard 
+        <h1 className='title'>Personajes de Rick & Morty</h1>
+ 
+        <div id='cards'>
+          <RickAndMortyCharacterCard id={1}/>
+          <RickAndMortyCharacterCard id={2}/> 
+          <RickAndMortyCharacterCard id={4}/> 
+          <RickAndMortyCharacterCard id={100}/>
+          <RickAndMortyCharacterCard id={13}/>
+          <RickAndMortyCharacterCard id={11}/>
+          <RickAndMortyCharacterCard id={33}/>
+          <RickAndMortyCharacterCard id={10}/>
+        </div>        
         
-          name =  {name}
-          image = {image}
-          gender = {gender}
-          status = {status}
-
-        />
-
+        
       </div>
   )
 }
