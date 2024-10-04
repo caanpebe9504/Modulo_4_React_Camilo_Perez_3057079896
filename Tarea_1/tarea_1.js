@@ -4,7 +4,7 @@ let mensaje3 = document.getElementById("mensaje3")
 
 let boton = document.getElementById("boton")
 
-
+boton.addEventListener("mouseenter",mostrarMensaje)
 boton.addEventListener("mouseleave", ocultarMensaje)
 
 function mostrarMensaje(){
