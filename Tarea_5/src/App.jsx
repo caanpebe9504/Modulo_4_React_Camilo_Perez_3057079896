@@ -1,25 +1,23 @@
-import react, { useState } from "react"
+import React, { useState } from "react"
+import './App.css';
 
-import './App.css'
+import LoginForm from "./assets/components/Login/LoginForm";
+import HomePage from "./assets/components/HomePage/HomePage";
 
-import FormComponent from "./assets/form-component/formComponent"
-import HomePage from "./assets/page/homePage"
+const App = () =>{
 
-const App = () => {
-
-    const [name, setName] = useState("")
-
-    const submitHanlder = (event) => {
-        
-        event.preventDefault()
-    }
+    const [user, setUser] = useState([])
 
     return(
-        
         <div>
-            
+            {
+              user.length === 0 ? 
+              <LoginForm setUser={setUser}/>
+              : <HomePage user={user} setUser={setUser}/>
+            }
         </div>
     )
+
 }
 
 export default App
