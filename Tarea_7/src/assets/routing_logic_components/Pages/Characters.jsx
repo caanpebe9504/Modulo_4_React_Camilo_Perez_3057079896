@@ -41,7 +41,7 @@ const Characters = () =>{
   return(
 
     <div>
-      <h1>Personajes de Rick & Morty</h1>
+      <h1>Rick & Morty Characters</h1>
       <div id="container">
           {charactersList.map((character) => (
              <CharacterCard 

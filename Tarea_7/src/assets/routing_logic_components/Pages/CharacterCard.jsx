@@ -21,9 +21,9 @@ const CharacterCard = ({name, image, status, create,animate}) => {
                 <img className={animate ? "swirl" : ""} src={image} alt={name} />
                 <h1>{name}</h1>
                 <p>
-                    Estado: <span className={getStatusClass(status)}>{status}</span>
+                    Statu: <span className={getStatusClass(status)}>{status}</span>
                 </p>
-                <h2>Fecha de creación</h2>
+                <h2>Created on: </h2>
                 <p>{create}</p>
             </div>
                 

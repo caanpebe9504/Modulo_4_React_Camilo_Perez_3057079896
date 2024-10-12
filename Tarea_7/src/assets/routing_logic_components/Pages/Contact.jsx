@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = () => {
+const Navbar = () => {
   return (
     <div>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -12,4 +12,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Navbar
