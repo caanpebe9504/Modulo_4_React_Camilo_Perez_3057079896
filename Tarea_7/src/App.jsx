@@ -1,12 +1,11 @@
 import React from 'react'
-import AppRouter from "./assets/routing_logic_components/Router_Component/AppRouter"
-
-import "./assets/routing_logic_components/components_Styles/App_Styles.css"
+import AppRouter from './assets/AppRouter'
+import "./assets/components_Styles/App_styles.css"
 
 function App() {
   return(
     
-      <div>
+      <div >
         <AppRouter/>
        </div>
 
