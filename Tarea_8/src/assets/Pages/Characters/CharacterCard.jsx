@@ -1,5 +1,5 @@
 import React from "react"
-import "../components_Styles/CharacterCardStyles.css"
+import "./CharacterCardStyles.css"
 
 const CharacterCard = ({name, image, status, create,animate}) => {
 
