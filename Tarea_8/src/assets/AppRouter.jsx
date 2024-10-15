@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import Characters from "./Pages/Characters/Characters";
-import Home from "./Pages/General_Contact_&_Home/Home";
+import Home from "./Pages/Home_Component/Home";
 import Episodes from "./Pages/Episodes/Episodes";
-import Contact from "./Pages/General_Contact_&_Home/Contact";
 import "../assets/components_Styles/Navbar.css"
 
 const AppRouter = () => {
@@ -15,14 +14,10 @@ const AppRouter = () => {
                  <Link to="/characters" >Characters</Link>
                  <Link to="/episodes" >Episodes</Link>
                 </div>
-                <div className="nav-right">
-                 <Link to="/contact">Contact</Link>
-                </div>
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/characters" element={<Characters />} />
-                <Route path="/contact" element={<Contact />} />
                 <Route path="/episodes" element={<Episodes />} />
             </Routes>
         </Router>
