@@ -1,4 +1,5 @@
 import React , {useState, useEffect} from 'react'
+import { useLocation } from 'react-router-dom';
 import CharacterCard from './CharacterCard'
 
 const Characters = () =>{
@@ -7,10 +8,15 @@ const Characters = () =>{
   const [info, setInfo] = useState([])
   const [page, setPage] = useState(1)
   const [animate, setAnimate] = useState(false)
+  const [search, setSearch] = useState('');
 
+  const location = useLocation();
 
   useEffect(() => {
     
+    const queryParams = new URLSearchParams(location.search);
+    const characterName = queryParams.get('name');
+
     const url = `https://rickandmortyapi.com/api/character/?page=${page}`
 
     fetch(url) 
@@ -22,7 +28,7 @@ const Characters = () =>{
 
     })
     .catch((error) => console.error("Error fetching data:", error));
-  }, [page])
+  }, [page, location.search])
 
   const nextPage = () => {
     if(info.next){
