@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import Characters from "./Pages/Characters/Characters";
-import Home from "./Pages/Home";
+import Home from "./Pages/General_Contact_&_Home/Home";
 import Episodes from "./Pages/Episodes/Episodes";
-import Contact from "./Pages/Contact";
+import Contact from "./Pages/General_Contact_&_Home/Contact";
 import "../assets/components_Styles/Navbar.css"
 
 const AppRouter = () => {
