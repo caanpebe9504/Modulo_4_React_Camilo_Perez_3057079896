@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import HomeCharacterCard from './HomeCharacterCard';
 
 const Home = () => {
@@ -62,38 +62,37 @@ const Home = () => {
       <h1 className="text-3xl font-bold mb-4 text-center">Rick & Morty Characters</h1>
 
       <form onSubmit={(e) => { e.preventDefault(); onSearch(); }} className="mb-4 flex flex-col space-y-2">
-    <input
-        type="text"
-        name="search"
-        placeholder="Search by name"
-        
-        onChange={(e) => setQuery(e.target.value)}
-        defaultValue={name}
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-    />
-    <input
-        type="text"
-        name="status"
-        placeholder="Status (alive, dead, unknown)"
-        onChange={(e) => setStatus(e.target.value)}
-        defaultValue={statusParam}
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-    />
-    <input
-        type="text"
-        name="gender"
-        placeholder="Gender (female, male, genderless, unknown)"
-        onChange={(e) => setGender(e.target.value)} 
-        defaultValue={genderParam}
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-    />
-    <button 
-        type="button" 
-        onClick={onSearch} 
-        className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
-    >
-        Search
-    </button> 
+  <input
+      type="text"
+      name="search"
+      placeholder="Search by name"
+      onChange={(e) => setQuery(e.target.value)}
+      defaultValue={name}
+      className="p-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+  />
+  <input
+      type="text"
+      name="status"
+      placeholder="Status (alive, dead, unknown)"
+      onChange={(e) => setStatus(e.target.value)}
+      defaultValue={statusParam}
+      className="p-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+  />
+  <input
+      type="text"
+      name="gender"
+      placeholder="Gender (female, male, genderless, unknown)"
+      onChange={(e) => setGender(e.target.value)} 
+      defaultValue={genderParam}
+      className="p-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+  />
+  <button 
+      type="button" 
+      onClick={onSearch} 
+      className="bg-blue-500 text-red p-1 text-sm rounded hover:bg-blue-600 transition"
+  >
+      Search
+  </button> 
 </form>
 
       <div id="container" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
